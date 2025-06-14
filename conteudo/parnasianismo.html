@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+     <!--========== CSS ==========-->
+     <link rel="stylesheet" href="../css/global.css">
+     <link rel="stylesheet" href="../css/usuario/card.css">
+     <link rel="stylesheet" href="../css/usuario/Botão.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="../revisao_conteudo.css">
+
+    <title>Literatura - Revisão de Conteúdo - IFVest</title>
+</head>
+
+<body>
+    <!--========== HEADER ==========-->
+
+    <header class="header">
+        <div class="header__container">
+
+            <a href="" class="header__logo">IFVest</a>
+
+
+
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+
+            </div>
+
+
+            <div style="display: flex; align-items: center;">
+                <a href="/" class="header__logo-name" style="margin-right: 10px;">
+                    emmaayers
+                </a>
+
+                <img src="./img/profile.jpg" alt="Perfil" class="header__img" id="perfilImage">
+
+
+
+            </div>
+
+
+        </div>
+    </header>
+
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <div class="header__close">
+                    <i class='bx bx-x' id="header-close"></i>
+                </div>
+                <a href="/" class="nav__link nav__logo">
+                    <img width="80" height="80" src="/img/logo/logo_IFSP.png" alt="if" />
+
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Perfil</h3>
+
+                        <a href="/" class="nav__link">
+                            <i class='bx bx-home nav__icon'></i>
+                            <span class="nav__name">Inicio</span>
+                        </a>
+
+
+
+                        
+                </div>
+
+            </div>
+
+            
+
+        </nav>
+    </div>
+    <script>
+        document.getElementById('perfilImage').addEventListener('click', function () {
+            window.location.href = '/';
+        });
+    </script>
+    <script>
+        document.getElementById('logout-link').addEventListener('click', function (event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            document.querySelector('.nav__logout-form').submit(); // Envia o formulário
+        });
+    </script>
+
+    <!--========== CONTENTS ==========-->
+
+    <main>
+        <h1>Parnasianismo</h1>
+        <h2>Revisão de Literatura</h2>
+        <p style="display: none;"></p>
+
+        <div class="markdown-content">
+                <p>O Parnasianismo foi um movimento poético contemporâneo ao Realismo, no final do século XIX. Também
+                    reagiu ao sentimentalismo romântico, mas, ao contrário do Realismo, não tinha foco na crítica
+                    social. Sua principal preocupação era com a estética e a perfeição formal do poema.</p>
+                <h3>Principais Características:</h3>
+                <ul>
+                    <li>Lema da "arte pela arte": a arte não precisa ter função social, basta ser bela.</li>
+                    <li>Busca pela perfeição formal, com uso de rimas ricas e métrica rigorosa (especialmente sonetos).
+                    </li>
+                    <li>Objetividade e descritivismo, evitando o sentimentalismo.</li>
+                    <li>Vocabulário culto e temas inspirados na Antiguidade Clássica.</li>
+                    <li>Distanciamento do eu lírico (impessoalidade).</li>
+                </ul>
+                <h3>Principais Autores:</h3>
+                <ul>
+                    <li>Olavo Bilac</li>
+                    <li>Raimundo Correia</li>
+                    <li>Alberto de Oliveira</li>
+                </ul>
+        </div>
+        <div class="pratica-area">
+            <div class="practice-btn">Flashcards</div>
+            <div class="practice-btn">Desafios</div>
+        </div>
+        <div class="material-externo-area">
+            <div class="material-externo-sessao-video">
+                <h3>Vídeos de apoio</h3>
+                <hr>
+                <a href="https://www.youtube.com/watch?v=FjRIgCgIeXw" class="material-externo-link" target="_blank">O PARNASIANISMO para o ENEM | Débora Aladim</a>
+            </div>
+            <div class="material-externo-sessao-site">
+                <h3>Sites externos</h3>
+                <hr>
+                <a href="https://brasilescola.uol.com.br/literatura/parnasianismo.htm" class="material-externo-link" target="_blank">Parnasianismo: o que foi, características - Brasil Escola</a>
+            </div>
+        </div>
+    </main>
+
+    <!--========== MAIN JS ==========-->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
