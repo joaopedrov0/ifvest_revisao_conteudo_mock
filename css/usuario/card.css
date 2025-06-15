@@ -1,5 +1,5 @@
 .ag-format-container {
-  width: 1142px;
+  width: clamp(300px, 80vw, 960px);
   margin: 0 auto;
 }
 
