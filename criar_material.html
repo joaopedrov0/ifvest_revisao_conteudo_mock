@@ -140,10 +140,20 @@
                     </div>
                 </div>
 
-                <!-- Palavras-chave -->
-                <div class="form-group">
-                    <label for="palavrasChave">Palavras-chave (separadas por vírgula)</label>
-                    <input type="text" class="form-control" id="palavrasChave" placeholder="trovador, cantigas, vassalagem">
+                <div class="form-row keyword-field align-items-end">
+                    <!-- Palavras-chave -->
+                    <div class="form-group col-md-8">
+                        <label for="palavrasChave">Palavras-chave</label>
+                        <input type="text" class="form-control" id="palavrasChave" placeholder="trovador, cantigas, vassalagem">
+                    </div>
+    
+                    <div class="form-group col-md-4">
+                        <button type="button" class="btn btn-primary" onclick="addKeyword()">Adicionar palavra-chave</button>
+                    </div>
+    
+                    <div class="form-group tag-box">
+    
+                    </div>
                 </div>
 
                 <!-- Editor Markdown -->
