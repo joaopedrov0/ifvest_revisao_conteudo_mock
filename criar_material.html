@@ -12,9 +12,16 @@
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/usuario/card.css">
     <link rel="stylesheet" href="./css/usuario/Botão.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./revisao_conteudo.css">
+    <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+    <link rel="stylesheet" href="./criar_material.css">
+
+    <!-- =========== JS ============ -->
+     
+    <script src="https://unpkg.com/easymde/dist/easymde.min.js" defer></script>
+    <script src="./main.js" defer></script>
 
     <title>Revisão de Conteúdo - IFVest</title>
 </head>
@@ -70,7 +77,7 @@
                             <i class='bx bx-home nav__icon'></i>
                             <span class="nav__name">Inicio</span>
                         </a>
-                        <a href="./criar_material.html" class="nav__link">
+                        <a href="" class="nav__link">
                             <i class="bx bx-edit nav__icon"></i>
                             <span class="nav__name">Criar material</span>
                         </a>
@@ -100,84 +107,61 @@
     <!--========== CONTENTS ==========-->
 
     <main>
-        <h1>Módulo de Revisão de Conteúdo</h1>
-        <h2>Escolha a área que deseja estudar</h2>
+        <h1>Criar Material</h1>
         <p style="display: none;"></p>
 
-        <div class="ag-format-container">
-
-            <div class="ag-courses_box">
-
-                <div class="ag-courses_item">
-                    <a href="./topicos.html" class="ag-courses-item_link">
-                        <div class="ag-courses-item_bg"></div>
-
-                        <div class="ag-courses-item_title">
-                            Matemática
-                        </div>
-                    </a>
+        <div class="form-container">
+            <form>
+                <!-- Título -->
+                <div class="form-group">
+                    <label for="materialTitulo">Título do Material</label>
+                    <input type="text" class="form-control" id="materialTitulo" placeholder="Ex: Introdução ao Trovadorismo">
                 </div>
 
-                <div class="ag-courses_item">
-                    <a href="./topicos.html" class="ag-courses-item_link">
-                        <div class="ag-courses-item_bg"></div>
-
-                        <div class="ag-courses-item_title">
-                            Física
-
-                        </div>
-                    </a>
+                <!-- Seletores de Área e Tópico -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="selectArea">Área</label>
+                        <select id="selectArea" class="form-control">
+                            <option selected>Escolha...</option>
+                            <option>Literatura</option>
+                            <option>Matemática</option>
+                            <option>Física</option>
+                            <option>Gramática</option>
+                            <option>Biologia</option>
+                            <option>Geografia</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="selectTopico">Tópico</label>
+                        <select id="selectTopico" class="form-control">
+                            <option selected>Escolha a área primeiro...</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="ag-courses_item">
-                    <a href="./topicos.html" class="ag-courses-item_link">
-                        <div class="ag-courses-item_bg"></div>
-
-                        <div class="ag-courses-item_title">
-                            Gramática
-
-                        </div>
-                    </a>
+                <!-- Palavras-chave -->
+                <div class="form-group">
+                    <label for="palavrasChave">Palavras-chave (separadas por vírgula)</label>
+                    <input type="text" class="form-control" id="palavrasChave" placeholder="trovador, cantigas, vassalagem">
                 </div>
 
-                <div class="ag-courses_item">
-                    <a href="./topicos.html" class="ag-courses-item_link">
-                        <div class="ag-courses-item_bg"></div>
-
-                        <div class="ag-courses-item_title">
-                            Literatura
-                        </div>
-                    </a>
+                <!-- Editor Markdown -->
+                <div class="form-group">
+                    <label for="markdownEditor">Conteúdo do Material (Markdown)</label>
+                    <textarea id="markdownEditor"></textarea>
                 </div>
 
-                <div class="ag-courses_item">
-                    <a href="./topicos.html" class="ag-courses-item_link">
-                        <div class="ag-courses-item_bg"></div>
-
-                        <div class="ag-courses-item_title">
-                            Biologia
-
-                        </div>
-                    </a>
+                <!-- Materiais Externos -->
+                <div class="form-group">
+                    <label for="linksExternos">Links Externos (um por linha)</label>
+                    <textarea class="form-control" id="linksExternos" rows="3" placeholder="https://www.youtube.com/watch?v=...&#10;https://www.todamateria.com.br/..."></textarea>
                 </div>
 
-                <div class="ag-courses_item">
-                    <a href="./topicos.html" class="ag-courses-item_link">
-                        <div class="ag-courses-item_bg"></div>
-
-                        <div class="ag-courses-item_title">
-                            Geografia
-
-                        </div>
-                    </a>
-                </div>
-
-            </div>
+                <button type="submit" class="btn btn-primary w-100">Criar Material</button>
+            </form>
         </div>
     </main>
-
-    <!--========== MAIN JS ==========-->
-    <script src="/js/main.js"></script>
 </body>
 
 </html>

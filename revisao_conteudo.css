@@ -42,8 +42,22 @@ main h2{
     margin: 10px 0;
 }
 
+.ag-courses_item{
+    span{
+        color: white;
+        z-index: 5;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+.conteudo-box .ag-courses-item_link:hover .ag-courses-item_bg {
+    transform: scale(20);
+}
 @media screen and (max-width: 960px){
     .ag-courses_item{
         width: 100%;
+        margin: 1rem 0;
     }
 }
